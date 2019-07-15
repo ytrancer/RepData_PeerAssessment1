@@ -107,6 +107,8 @@ total_NAs
 
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
+There is a hint in the question: **impute** is a function and we can use **mean** with it as suggested.
+
 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
 
@@ -164,6 +166,8 @@ median_of_steps_no_NAs
 ```
 ## [1] 10766
 ```
+
+The **mean** hasn't changed while the **median** has changed slightly. Imputing  NAs has had little effect on the data.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 

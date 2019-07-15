@@ -443,8 +443,11 @@ max_steps</code></pre>
 total_NAs</code></pre>
 <pre><code>## [1] 2304</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.</p></li>
-<li><p>Create a new dataset that is equal to the original dataset but with the missing data filled in.</p></li>
+<li>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.</li>
+</ol>
+<p>There is a hint in the question: <strong>impute</strong> is a function and we can use <strong>mean</strong> with it as suggested.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a new dataset that is equal to the original dataset but with the missing data filled in.</li>
 </ol>
 <pre class="r"><code>activity_no_NAs &lt;- activity
 activity_no_NAs$steps &lt;- impute(activity_no_NAs$steps, fun = mean)
@@ -479,6 +482,7 @@ mean_of_steps_no_NAs</code></pre>
 <pre class="r"><code>median_of_steps_no_NAs &lt;- round(median(steps_no_NAs$sum_of_steps, na.rm = TRUE))
 median_of_steps_no_NAs</code></pre>
 <pre><code>## [1] 10766</code></pre>
+<p>The <strong>mean</strong> hasn’t changed while the <strong>median</strong> has changed slightly. Imputing NAs has had little effect on the data.</p>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
